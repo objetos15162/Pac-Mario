@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=W1
+comment0.text=\r\n\ Primer\ mundo\r\n\ \r\n
+comment1.params=op
+comment1.target=W1(int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ W1.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Metodo\ encargado\ del\ acto\ del\ jugador\r\n
+comment3.params=
+comment3.target=void\ insertRectangles()
+comment3.text=\r\n\ Metodo\ encargado\ de\ insertar\ los\ rectangulos\ al\ mundo\r\n
+comment4.params=
+comment4.target=void\ insertCoins()
+comment4.text=\r\n\ Metodo\ encargado\ de\ agregar\ las\ monedas\ al\ mundo\r\n
+numComments=5
