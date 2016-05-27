@@ -1,16 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Segundo mundo
+ * Primer mundo
  * 
  */
-public class W2 extends MyWorld
+
+public class W1 extends MyWorld
 {
+    
     /**
-     * Constructor for objects of class W2.
+     * Constructor for objects of class W1.
      * 
      */
-    public W2(int op,Jugador player,long ti)
+    public W1(int op)
     {
         super();
         
@@ -19,7 +21,6 @@ public class W2 extends MyWorld
         insertRectangles();
         
         insertCoins();
-        
         switch(op)
         {
             case 1: jugador = new Mario();
@@ -29,21 +30,13 @@ public class W2 extends MyWorld
             case 3: jugador = new Yoshi();
                     break;
         }
-        
-        jugador.setVidas(player.getVidas());
-        jugador.setMonedas(player.getMonedas());
-        
         addObject(jugador,70,70);
         
         addObject(malos.get(1),70,490);
         addObject(malos.get(0),730,70);
         addObject(malos.get(2),250,370);
         
-        malos.get(1).setSpeed(7.0);
-        malos.get(0).setSpeed(7.0);
-        malos.get(2).setSpeed(7.0);
-        
-        TInicio = ti;
+        TInicio = System.currentTimeMillis();
     }
     
     /**
@@ -61,47 +54,30 @@ public class W2 extends MyWorld
         
         checaVidas();
             
-        if(jugador.getMonedas() >= 132)
+        if(jugador.getMonedas() >= 65)
         {
             Greenfoot.delay(2);
             cancion.stop();
-            Greenfoot.setWorld(new W3(jug,jugador,TInicio));
+            Greenfoot.setWorld(new W2(jug,jugador,TInicio));
         }
     }
     
     /**
-     * Metodo encargado de imprimir las monedas
-     */
-    public void imprimeTexto(int monedas)
-    {
-        super.imprimeTexto(monedas);
-    }
-    
-    /**
-     * Metodo encargado de insertar los rectangulos en el mundo
+     * Metodo encargado de insertar los rectangulos al mundo
      */
     private void insertRectangles()
     {
-        addObject(new Rectangle(2),160,430);
-        addObject(new Rectangle(2),640,130);
-        addObject(new Rectangle(4),400,130);
-        
-        Rectangle r1 = new Rectangle(2);
-        addObject(r1,310,280);
-        r1.turn(90);
-        
-        Rectangle r2 = new Rectangle(2);
-        addObject(r2,490,280);
-        r2.turn(90);
-        
+        addObject(new Rectangle(1),160,160);
+        addObject(new Rectangle(1),640,160);
+        addObject(new Rectangle(2),400,130);
+        addObject(new Rectangle(1),400,280);
         addObject(new Rectangle(3),640,370);
-        addObject(new Rectangle(3),160,190);
+        addObject(new Rectangle(3),160,370);
         addObject(new Rectangle(4),400,430);
-        
     }
     
     /**
-     * Metodo encargado de insertar las monedas en el mundo
+     * Metodo encargado de agregar las monedas al mundo
      */
     private void insertCoins()
     {
@@ -134,25 +110,20 @@ public class W2 extends MyWorld
         {
             addObject(new Moneda(),550,130+60*i);
         }
-       
-        addObject(new Moneda(),490,190);
-        addObject(new Moneda(),310,190);
-        addObject(new Moneda(),490,370);
-        addObject(new Moneda(),310,370);
         
-        for(int i=0;i<2;i++)
+        for(int i=0;i<5;i++)
         {
-            addObject(new Moneda(),130+60*i,310);
+            addObject(new Moneda(),310,130+60*i);
+        }
+        
+        for(int i=0;i<5;i++)
+        {
+            addObject(new Moneda(),490,130+60*i);
         }
         
         for(int i=0;i<2;i++)
         {
-            addObject(new Moneda(),130+60*i,370);
-        }
-        
-        for(int i=0;i<2;i++)
-        {
-            addObject(new Moneda(),610+60*i,190);
+            addObject(new Moneda(),130+60*i,250);
         }
         
         for(int i=0;i<2;i++)
@@ -160,14 +131,14 @@ public class W2 extends MyWorld
             addObject(new Moneda(),610+60*i,250);
         }
         
-        for(int i=0;i<4;i++)
+        for(int i=0;i<2;i++)
         {
-            addObject(new Moneda(),430,370-60*i);
+            addObject(new Moneda(),370+60*i,190);
         }
         
-        for(int i=0;i<4;i++)
+        for(int i=0;i<2;i++)
         {
-            addObject(new Moneda(),370,370-60*i);
+            addObject(new Moneda(),370+60*i,370);
         }
     }
 }

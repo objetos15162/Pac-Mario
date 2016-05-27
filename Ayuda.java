@@ -40,6 +40,6 @@ public class Ayuda extends Navegacion
      */
     public void imprimeTexto(String texto)
     {
-        showText(texto,400,300);
+        showText(texto,400,320);
     }
 }

@@ -33,13 +33,13 @@ public class W3 extends MyWorld
         
         addObject(jugador,70,70);
         
-        addObject(goomba,70,490);
-        addObject(koppa,730,70);
-        addObject(villano,310,370);
+        addObject(malos.get(1),70,490);
+        addObject(malos.get(0),730,70);
+        addObject(malos.get(2),310,370);
         
-        goomba.setSpeed(8.5);
-        koppa.setSpeed(8.5);
-        villano.setSpeed(8.5);
+        malos.get(1).setSpeed(8.5);
+        malos.get(0).setSpeed(8.5);
+        malos.get(2).setSpeed(8.5);
         
         TInicio = ti;
     }
