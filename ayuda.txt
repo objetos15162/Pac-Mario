@@ -1,8 +1,0 @@
-Basado en el clasico juego de Pac-Man, 
-tu personaje debera recolectar todas
-las monedas de cada nivel en el menos 
-tiempo posible, debes ser rapido pues
-cada 20 segundos aparecerá un nuevo 
-enemigo en el escenario.
-
-Utiliza las flechas para mover al jugador.
